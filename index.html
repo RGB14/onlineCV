@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jscript.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <div id="sidebar">
+        <div class="toggle-btn" id="clickStyle" onClick="show()">
+           <style >
+              #clickStyle {
+                  color: #fff;
+              }
+            </style>
+            _move()
+        </div>
+        <ul >
+            <li><a href="" id="sidebarLinks"><span>_CV</span></a></li>
+            <li><a href="" id="sidebarLinks"><span>_WORKS</span></a></li>
+            <li><a href="" id="sidebarLinks"><span>_PROJECTS</span></a></li>
+            <li><a href="" id="sidebarLinks"><span>_SOCIAL</span></a></li>
+            <li><a href="" id="sidebarLinks"><span>_CONTACT</span></a></li>
+        </ul>
+    </div>
+    <!--SHOWCASE-->
+    <h1 class="display-2 mt-5 pt-5">
+        <style>
+            html,body{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100vh;
+                background: #101010;
+            }
+            .data{
+                font-family: 'Courier New', Courier, monospace;
+                color: #fff;
+                font-size: 30px;
+                letter-spacing: 20px;
+                font-weight: 600;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            </style>
+        <div class="data">>>> SUDIPTO MAJUMDER </div>
+        <script type="text/javascript">
+        const text = baffle(".data");
+        text.set({
+            characters: '>█░ █▓▒░▒ ▒░█▒▓ ▒▒▓ <░>▓█ /▓█░ ░░> ░█▓▒ ░░░/',
+            speed: 120
+        });
+        text.start();
+        text.reveal(8000);
+        </script>
+
+    </h1>
+</body>
+</html>

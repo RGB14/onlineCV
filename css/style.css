@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Source Code Pro', monospace;
+}
+
+#sidebar {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #000;
+    left: 0;
+    transition: .4s;
+}
+
+#sidebar.active{
+    left: -300px;
+}
+
+#sidebar ul li{
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 24px;
+}
+
+#sidebar .toggle-btn{
+    position: absolute;
+    top: 30px;
+    left: 330px;
+}
+
+.toggle-btn span{
+    width: 45px;
+    height: 4px;
+    background: #000;
+    display: block;
+    margin-top: 4px;
+}
+
+#sidebarLinks{
+    text-decoration: none;
+    color: #00FF41;
+}
+
+#sidebarLinks span{
+    opacity: 0;
+    animation: appear-text 0.00001s linear forwards;
+    animation-delay: 1.4s;
+}
+
+#sidebarLinks:after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #00FF41;
+    animation: sidebarLinks 1.5s cubic-bezier(0.19,1,0.22,1) forwards;
+    animation-delay: 1s;
+}
+
+@keyframes sidebarLinks{
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+
+@keyframes appear-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
